@@ -1,0 +1,2 @@
+module hibernate_tutorial {
+}
