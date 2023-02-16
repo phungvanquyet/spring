@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <modelVersion>4.0.0</modelVersion>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <parent>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <groupId>cn.org.thinkcloud</groupId>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <artifactId>think-cloud-build</artifactId>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <version>2.0.0.RELEASE</version>
+                                        
+  
+  
+  
+  
+  
+  
+  
+  
+  </parent>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <groupId>com.pvquyet</groupId>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <artifactId>mycoolapp</artifactId>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <version>1.0</version>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <packaging>pom</packaging>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <properties>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <rversion>2.0.0.RELEASE</rversion>
+                                        
+  
+  
+  
+  
+  
+  
+  
+  
+  </properties>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--OWN Dependencies -->
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <dependencyManagement>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <dependencies>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>mycoolapp-domain</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>mycoolapp-repo-api</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>mycoolapp-biz-api</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>mycoolapp-manager-api</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>mycoolapp-commons</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                              
+    
+    
+    
+    
+    
+    
+    
+    
+    </dependencies>
+                                        
+  
+  
+  
+  
+  
+  
+  
+  
+  </dependencyManagement>
+                  
+  
+  
+  
+  
+  
+  
+  
+  
+  <modules>
+                                      
+    
+    
+    
+    
+    
+    
+    
+    
+    <module>mycoolapp-domain</module>
+                                      
+    
+    
+    
+    
+    
+    
+    
+    
+    <module>mycoolapp-commons</module>
+                                  
+    
+    
+    
+    
+    
+    
+    
+    <module>mycoolapp-repo-api</module>
+                              
+    
+    
+    
+    
+    
+    
+    <module>mycoolapp-biz-api</module>
+                          
+    
+    
+    
+    
+    
+    <module>mycoolapp-manager-api</module>
+                      
+    
+    
+    
+    
+    <module>mycoolapp-biz-provider</module>
+                  
+    
+    
+    
+    <module>mycoolapp-repo-provider</module>
+              
+    
+    
+    <module>mycoolapp-manager-provider</module>
+          
+    
+    <module>mycoolapp-ctl</module>
+      
+  </modules>
+                
+
+
+
+
+
+
+
+</project>
