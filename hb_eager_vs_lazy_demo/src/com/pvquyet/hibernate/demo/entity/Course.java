@@ -23,7 +23,9 @@ public class Course {
 	// define tostring
 	
 	// annotate fields
-	
+
+	// get all user
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
