@@ -2,7 +2,7 @@ package com.pvquyet.springsecurity.demo.config;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
-public class SecurityWebApplicationInitiallizer 
-					extends AbstractSecurityWebApplicationInitializer {
-	
+public class SecurityWebApplicationInitializer 
+						extends AbstractSecurityWebApplicationInitializer {
+
 }
