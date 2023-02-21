@@ -2,6 +2,7 @@ package com.pvquyet.springboot.cruddemo.rest;
 
 import java.util.List;
 
+import com.pvquyet.springboot.cruddemo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,17 +15,17 @@ import com.pvquyet.springboot.cruddemo.entity.Employee;
 @RequestMapping("/api")
 public class EmployeeRestController {
 	
-	private EmployeeDAO employeeDAO;
+	private EmployeeService employeeService;
 	
 	// quick and drity: inject employee dao
 	@Autowired
-	public EmployeeRestController(EmployeeDAO theEmployeeDAO) {
-		employeeDAO = theEmployeeDAO;
+	public EmployeeRestController(EmployeeService theEmployeeService) {
+		employeeService = theEmployeeService;
 	}
 	
 	// expose "/employee" and return list of employees
 	@GetMapping("/employees")
 	public List<Employee> findAll() {
-		return employeeDAO.findAll();
+		return employeeService.findAll();
 	}
 }
