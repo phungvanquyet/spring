@@ -48,18 +48,20 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 		
 		// get employee
 		Employee employee = currentSession.get(Employee.class, id); 
+		currentSession.clear();
 		
 		// return the results
 		return employee;
 	}
 
 	@Override
-	public void save(Employee theEmployee) {
+	public Integer save(Employee theEmployee) {
 		// get the current hibernate session
 		Session currentSession = entityManager.unwrap(Session.class);
 		
-		// get employee
-		currentSession.persist(theEmployee);
+		// save employee
+		currentSession.saveOrUpdate(theEmployee);
+		return theEmployee.getId();
 	}
 
 	@Override
@@ -73,7 +75,6 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 		
 		// execute query and get result list
 		currentSession.remove(employee);
-		
 	}
 
 	

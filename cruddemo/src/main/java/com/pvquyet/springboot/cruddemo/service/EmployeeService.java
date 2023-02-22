@@ -10,7 +10,7 @@ public interface EmployeeService {
 
     public Employee findById(int id);
 
-    public void save(Employee theEmployee);
+    public Integer save(Employee theEmployee);
 
     public void delete(int theId);
 }
