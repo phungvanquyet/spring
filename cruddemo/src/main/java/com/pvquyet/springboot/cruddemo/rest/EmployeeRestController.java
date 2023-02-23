@@ -7,6 +7,7 @@ import javax.management.RuntimeErrorException;
 import com.pvquyet.springboot.cruddemo.service.EmployeeService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +27,7 @@ public class EmployeeRestController {
 
 	// quick and drity: inject employee dao
 	@Autowired
-	public EmployeeRestController(EmployeeService theEmployeeService) {
+	public EmployeeRestController(@Qualifier("employeeServiceImplRepository") EmployeeService theEmployeeService) {
 		employeeService = theEmployeeService;
 	}
 
